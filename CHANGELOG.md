@@ -4,6 +4,10 @@ Release notes for Olef Cloud CLI (`ocloud`). Every release, with its binaries, i
 [Releases page](https://github.com/olef-dev/ocloud/releases).
 
 
+## v3.18.1
+
+- **Safer workspace cleanup on your own computer**: the host agent removes only the folders of workspaces Olef Cloud says were deleted, so folders from an earlier registration of the same machine are kept.
+
 ## v3.18.0
 
 - **Deterministic `next_actions` across CLI, MCP, and skills**: `ocloud --json` emits structured, shell-quoted `next_actions` hints across every command family (auth, workspaces, sessions, runs, agents, local checkouts, schedules, subscriptions, jobs, tokens, validators, circuit breakers, inbox/threads, builds, devices, and doctor), replacing stale command prefixes and placeholder arguments. `ocloud mcp` now returns standardized MCP-tool-vocabulary `next_actions` in both success payloads and errors, and the `ocloud` Claude Code / Codex plugin skills teach agents how to act on and surface them.
